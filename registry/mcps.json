@@ -1,11 +1,11 @@
 {
-  "$schema": "https://easypa.ai/schemas/healthcare-mcp-registry-v1.json",
+  "$schema": "https://mcpforhealthcare.com/schemas/healthcare-mcp-registry-v1.json",
   "version": "1.0.0",
   "last_updated": "2026-02-25",
   "maintainer": {
     "name": "Ralph Martello, MD",
-    "organization": "EasyPA.ai",
-    "url": "https://easypa.ai",
+    "organization": "MCP for Healthcare",
+    "url": "https://mcpforhealthcare.com",
     "credentials": [
       "Board-Certified Pediatric Hospitalist",
       "Harvard AI Certified",
@@ -118,10 +118,10 @@
   ],
   "mcps": [
     {
-      "id": "easypa-reimbursement-engine",
-      "name": "EasyPA ReimbursementEngine",
-      "featured": true,
-      "source": "easypa-ai/reimbursement-engine",
+      "id": "reimbursement-engine",
+      "name": "ReimbursementEngine",
+      "featured": false,
+      "source": "rdmgator12/reimbursement-engine",
       "url": null,
       "description": "18 tools covering Medicare coverage determination, ICD-10 coding, NPI validation, payer policy analysis, PubMed search, and bioRxiv/medRxiv preprint search.",
       "categories": ["rcm", "credentialing", "lifesci"],
@@ -149,11 +149,11 @@
         "get_preprint"
       ],
       "languages": [],
-      "install": "/plugin install easypa-ai/reimbursement-engine",
+      "install": "/plugin install rdmgator12/reimbursement-engine",
       "assessment_date": "2026-02-25",
       "reassessment_due": "2027-02-25",
-      "maintainer": "EasyPA.ai",
-      "license": "EasyPA Commercial"
+      "maintainer": "Ralph Martello, MD",
+      "license": "Commercial"
     },
     {
       "id": "medical-mcp",
@@ -491,13 +491,13 @@
       "id": "denial-fighter",
       "name": "Denial Fighter Bundle",
       "description": "Everything you need to analyze, appeal, and prevent claim denials.",
-      "mcps": ["easypa-reimbursement-engine", "pubmed-standalone"]
+      "mcps": ["reimbursement-engine", "pubmed-standalone"]
     },
     {
       "id": "prior-auth-stack",
       "name": "Prior Auth Stack",
       "description": "CMS-0057 aligned prior authorization workflow.",
-      "mcps": ["easypa-reimbursement-engine", "wso2-fhir-mcp"]
+      "mcps": ["reimbursement-engine", "wso2-fhir-mcp"]
     },
     {
       "id": "clinical-reference-kit",
@@ -515,7 +515,7 @@
       "id": "compliance-suite",
       "name": "Compliance Suite",
       "description": "Quality reporting and regulatory compliance.",
-      "mcps": ["easypa-reimbursement-engine", "innovaccer-hmcp"]
+      "mcps": ["reimbursement-engine", "innovaccer-hmcp"]
     }
   ],
   "stats": {

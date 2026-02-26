@@ -48,7 +48,7 @@ MCPs seeking elevated compliance designations must provide:
 |-------------|---------|---------|
 | Cyber-Liability Insurance ($1M/$2M) | Recommended | Required |
 | Indemnification Agreement | Recommended | Required |
-| Breach Notification (24hr to EasyPA) | Required | Required |
+| Breach Notification (24hr to maintainers) | Required | Required |
 | Self-Attestation of Security Representations | Required | Required |
 | Annual Independent Pen Test | - | Required |
 
@@ -64,7 +64,7 @@ Found incorrect information, dead links, or data issues? [Report it](../../issue
 
 ### Compliance Feedback
 
-Have expertise in HIPAA, healthcare security, or regulatory compliance? We welcome feedback on our rating methodology. Open a general issue or email compliance@easypa.ai.
+Have expertise in HIPAA, healthcare security, or regulatory compliance? We welcome feedback on our rating methodology. Open a general issue to start a discussion.
 
 ## Pull Request Guidelines
 
@@ -87,5 +87,4 @@ This marketplace serves healthcare professionals and patients. All contributors 
 ## Questions?
 
 - Open an issue for public discussion
-- Email marketplace@easypa.ai for private inquiries
-- Visit [easypa.ai](https://easypa.ai) for more about the project
+- Use the repository's security advisory feature for sensitive reports

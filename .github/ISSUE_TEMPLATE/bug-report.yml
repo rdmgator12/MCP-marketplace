@@ -23,7 +23,7 @@ body:
     attributes:
       label: Affected MCP (if applicable)
       description: Name or ID of the MCP with the issue
-      placeholder: e.g., "easypa-reimbursement-engine"
+      placeholder: e.g., "reimbursement-engine"
 
   - type: textarea
     id: description

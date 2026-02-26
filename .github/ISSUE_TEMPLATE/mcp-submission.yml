@@ -141,5 +141,5 @@ body:
           required: true
         - label: The repository is publicly accessible or I will provide access for review
           required: true
-        - label: I understand that compliance ratings are assigned by EasyPA and are point-in-time assessments
+        - label: I understand that compliance ratings are assigned by the marketplace review team and are point-in-time assessments
           required: true

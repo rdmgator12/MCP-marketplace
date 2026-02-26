@@ -193,7 +193,7 @@ Before submitting your MCP to the marketplace:
 - [ ] Works with Claude Code or other MCP-compatible clients
 - [ ] Tested with synthetic healthcare data
 
-**Submit via**: [MCP Submission Issue Template](https://github.com/easypa-ai/healthcare-mcp-marketplace/issues/new?template=mcp-submission.yml)
+**Submit via**: [MCP Submission Issue Template](https://github.com/rdmgator12/MCP-marketplace/issues/new?template=mcp-submission.yml)
 
 ---
 
@@ -204,4 +204,4 @@ Before submitting your MCP to the marketplace:
 - [HL7 FHIR R4](https://hl7.org/fhir/R4)
 - [CMS-0057-F Final Rule](https://www.cms.gov/regulations-and-guidance)
 - [HIPAA Security Rule](https://www.hhs.gov/hipaa/for-professionals/security)
-- [EasyPA.ai](https://easypa.ai)
+- [MCP for Healthcare](https://github.com/rdmgator12/MCP-marketplace)

@@ -13,7 +13,7 @@
   ],
   "mcps": [
     {
-      "id": "easypa-reimbursement-engine",
+      "id": "reimbursement-engine",
       "role": "Primary",
       "tools_used": [
         "search_national_coverage",

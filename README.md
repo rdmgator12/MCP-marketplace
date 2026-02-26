@@ -2,9 +2,9 @@
 
 ### The First Physician-Vetted Healthcare MCP Marketplace
 
-> **Healthcare organizations don't need more AI demos. They need safe, auditable, installable AI toolchains that touch FHIR endpoints, EDI transactions, and payer policy databases without detonating compliance.** EasyPA.ai is building the trust layer the market is missing.
+> **Healthcare organizations don't need more AI demos. They need safe, auditable, installable AI toolchains that touch FHIR endpoints, EDI transactions, and payer policy databases without detonating compliance.** MCP for Healthcare is building the trust layer the market is missing.
 
-[![EasyPA.ai](https://img.shields.io/badge/EasyPA.ai-Healthcare%20MCP%20Marketplace-0D7377?style=for-the-badge)](https://easypa.ai)
+[![MCP for Healthcare](https://img.shields.io/badge/MCP%20for%20Healthcare-Marketplace-0D7377?style=for-the-badge)](https://github.com/rdmgator12/MCP-marketplace)
 [![License](https://img.shields.io/badge/License-See%20Individual%20MCPs-blue?style=for-the-badge)]()
 [![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-30+-D4A843?style=for-the-badge)]()
 
@@ -16,7 +16,7 @@
 
 This isn't a flat list. Every server is categorized by healthcare workflow, rated for compliance and clinical validity, and installable with a single command.
 
-**Built and maintained by [Ralph Martello, MD](https://easypa.ai)** — Board-Certified Pediatric Hospitalist | Harvard/Stanford AI Certified | ACMA Certified | Medical-Legal Expert
+**Built and maintained by Ralph Martello, MD** — Board-Certified Pediatric Hospitalist | Harvard/Stanford AI Certified | ACMA Certified | Medical-Legal Expert
 
 ---
 
@@ -24,10 +24,10 @@ This isn't a flat list. Every server is categorized by healthcare workflow, rate
 
 ```bash
 # Install the full Healthcare MCP Marketplace in Claude Code
-/plugin marketplace add easypa-ai/healthcare-mcp-marketplace
+/plugin marketplace add rdmgator12/healthcare-mcp-marketplace
 
 # Or install individual MCPs by category
-/plugin install easypa-ai/reimbursement-engine
+/plugin install rdmgator12/reimbursement-engine
 ```
 
 ---
@@ -94,13 +94,13 @@ Every MCP on this marketplace carries two ratings:
 
 ---
 
-### ⭐ EasyPA ReimbursementEngine
+### ReimbursementEngine
 
-> **The flagship.** 18 tools covering Medicare coverage determination, ICD-10 coding, NPI validation, payer policy analysis, and more. Built by EasyPA.ai.
+> 18 tools covering Medicare coverage determination, ICD-10 coding, NPI validation, payer policy analysis, and more.
 
 | Detail | Value |
 |--------|-------|
-| **Source** | `easypa-ai/reimbursement-engine` |
+| **Source** | `rdmgator12/reimbursement-engine` |
 | **Tools** | 18 |
 | **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) — public CMS data, no PHI |
 | **Clinical Score** | **C** — Operationally Useful |
@@ -127,7 +127,7 @@ Every MCP on this marketplace carries two ratings:
 - `get_preprint` — Full preprint metadata by DOI
 
 ```bash
-/plugin install easypa-ai/reimbursement-engine
+/plugin install rdmgator12/reimbursement-engine
 ```
 
 ---
@@ -392,7 +392,7 @@ git clone https://github.com/the-momentum/fhir-mcp-server.git
 
 ### NPPES/NPI Tools
 
-> See [EasyPA ReimbursementEngine](#-easypa-reimbursementengine) — includes NPI search, lookup, and validation tools.
+> See [ReimbursementEngine](#reimbursementengine) — includes NPI search, lookup, and validation tools.
 
 ---
 
@@ -402,7 +402,7 @@ git clone https://github.com/the-momentum/fhir-mcp-server.git
 
 ---
 
-> **Coming Soon**: EasyPA Medical-Legal MCP — standard of care research, causation analysis, deposition preparation, and expert report generation tools. Built from active medical-legal expert witness practice.
+> **Coming Soon**: Medical-Legal MCP — standard of care research, causation analysis, deposition preparation, and expert report generation tools. Built from active medical-legal expert witness practice.
 
 ---
 
@@ -519,13 +519,13 @@ Pre-configured MCP stacks for specific healthcare workflows:
 
 ### 🔥 Denial Fighter Bundle
 *Everything you need to analyze, appeal, and prevent claim denials.*
-- EasyPA ReimbursementEngine (NCD/LCD lookup, ICD-10 validation, payer policy)
+- ReimbursementEngine (NCD/LCD lookup, ICD-10 validation, payer policy)
 - PubMed MCP (clinical evidence for appeals)
 - NPI Registry (provider verification)
 
 ### 🔥 Prior Auth Stack
 *CMS-0057 aligned prior authorization workflow.*
-- EasyPA ReimbursementEngine (coverage determination, medical necessity)
+- ReimbursementEngine (coverage determination, medical necessity)
 - FHIR MCP Server (electronic PA submission via FHIR)
 - ICD-10/CPT tools (coding accuracy)
 
@@ -546,7 +546,7 @@ Pre-configured MCP stacks for specific healthcare workflows:
 
 ### 🔥 Compliance Suite
 *Quality reporting and regulatory compliance.*
-- EasyPA ReimbursementEngine (Medicare policy)
+- ReimbursementEngine (Medicare policy)
 - Innovaccer HMCP (if licensed)
 - NPI Registry (credentialing verification)
 
@@ -579,7 +579,7 @@ MCPs seeking Level 4 or Level 5 designation must meet additional requirements:
 
 - **Cyber-Liability Insurance**: Minimum $1M per occurrence / $2M aggregate
 - **Indemnification Agreement**: Standard template provided
-- **Breach Notification**: 24-hour notification commitment to EasyPA
+- **Breach Notification**: 24-hour notification commitment to marketplace maintainers
 - **Self-Attestation**: Accuracy of all security representations
 - **Annual Pen Test** (Level 5 only): Independent third-party penetration testing
 
@@ -597,7 +597,7 @@ Coming soon — starter templates with healthcare-specific scaffolding:
 
 ### Point-in-Time Architectural Assessment
 
-All EasyPA compliance ratings are **Point-in-Time Architectural Assessments**, not ongoing guarantees.
+All compliance ratings are **Point-in-Time Architectural Assessments**, not ongoing guarantees.
 
 Each rating reflects an evaluation of the MCP's disclosed security architecture, documented controls, and self-attested compliance posture **as of a specific assessment date**. The rating does not constitute:
 
@@ -622,7 +622,7 @@ To earn the highest trust designation, an MCP must pass **all seven** checks:
 
 ### Disclaimer
 
-EasyPA.ai provides compliance ratings as informational assessments to assist buyer evaluation. They are not legal opinions, HIPAA certifications, or guarantees of regulatory compliance. Users should conduct their own due diligence and legal review before deploying any MCP in a production environment handling PHI. EasyPA does not act as a Business Associate to marketplace users by virtue of providing compliance ratings for third-party MCPs.
+MCP for Healthcare provides compliance ratings as informational assessments to assist buyer evaluation. They are not legal opinions, HIPAA certifications, or guarantees of regulatory compliance. Users should conduct their own due diligence and legal review before deploying any MCP in a production environment handling PHI. The marketplace does not act as a Business Associate to users by virtue of providing compliance ratings for third-party MCPs.
 
 ---
 
@@ -637,7 +637,7 @@ This marketplace is built by a **board-certified pediatric hospitalist** with:
 - ACMA (American Case Management Association) certification
 - Active medical-legal expert witness practice
 - Deep CMS regulatory expertise (CMS-0057-F, HTI-1, Conditions of Participation)
-- Founder of [EasyPA.ai](https://easypa.ai) — AI-powered healthcare revenue cycle tools
+- Founder of MCP for Healthcare — physician-vetted healthcare MCP marketplace
 
 When this marketplace rates an MCP as clinically valid or HIPAA-appropriate, that assessment carries the weight of actual medical licensure and regulatory expertise.
 
@@ -652,21 +652,21 @@ MCP is the bridge between these mandated APIs and AI-powered healthcare workflow
 
 ### The One-Liner
 
-**EasyPA.ai is the Plaid for Healthcare AI.** As federal mandates force health systems and payers to expose FHIR APIs, EasyPA provides the trusted, physician-vetted, HIPAA-compliant MCP marketplace and middleware that allows AI agents to actually use them.
+**MCP for Healthcare is the Plaid for Healthcare AI.** As federal mandates force health systems and payers to expose FHIR APIs, this marketplace provides the trusted, physician-vetted, HIPAA-compliant MCP directory and middleware that allows AI agents to actually use them.
 
 ---
 
 ## Roadmap
 
 - [x] Launch marketplace with 30+ curated MCPs across 10 categories
-- [x] ReimbursementEngine (18 tools) live as flagship MCP
+- [x] ReimbursementEngine (18 tools) live
 - [x] HIPAA compliance rating framework published
 - [x] Clinical validity scoring methodology published
 - [ ] Developer submission portal live
 - [ ] PriorAuthEngine (proprietary MCP) — Q2 2026
 - [ ] DenialEngine (proprietary MCP) — Q3 2026
 - [ ] HIPAA-compliant MCP development templates
-- [ ] EasyPA Healthcare MCP Certification program
+- [ ] Healthcare MCP Certification program
 - [ ] Managed gateway hosting for Level 4/5 MCPs
 - [ ] Private marketplace deployment for enterprise customers
 - [ ] Annual Healthcare MCP Ecosystem Report
@@ -677,7 +677,7 @@ MCP is the bridge between these mandated APIs and AI-powered healthcare workflow
 
 This is an open marketplace. We welcome:
 
-- **MCP submissions** — [Open an issue](https://github.com/easypa-ai/healthcare-mcp-marketplace/issues) with the `[MCP Submission]` tag
+- **MCP submissions** — [Open an issue](https://github.com/rdmgator12/MCP-marketplace/issues) with the `[MCP Submission]` tag
 - **Category suggestions** — Help us refine the taxonomy
 - **Bug reports** — Found an issue with a listing? Let us know
 - **Compliance feedback** — Help us improve the rating methodology
@@ -686,7 +686,7 @@ This is an open marketplace. We welcome:
 
 ## License
 
-The marketplace itself is open source. Individual MCPs carry their own licenses as noted in each listing. EasyPA proprietary MCPs (ReimbursementEngine, PriorAuthEngine, DenialEngine) are licensed under EasyPA commercial terms.
+The marketplace itself is open source. Individual MCPs carry their own licenses as noted in each listing. Proprietary MCPs (ReimbursementEngine, PriorAuthEngine, DenialEngine) are licensed under separate commercial terms.
 
 ---
 
@@ -696,4 +696,4 @@ If this marketplace is useful to you, star the repo. It helps other healthcare t
 
 ---
 
-*Built with ❤️ by [EasyPA.ai](https://easypa.ai) | Ralph Martello, MD | The Plaid for Healthcare AI*
+*Built with ❤️ by Ralph Martello, MD | MCP for Healthcare*

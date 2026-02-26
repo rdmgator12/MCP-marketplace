@@ -2,7 +2,7 @@
 
 ## Overview
 
-Every MCP listed on the Healthcare MCP Marketplace receives two independent ratings assessed by EasyPA.ai:
+Every MCP listed on the Healthcare MCP Marketplace receives two independent ratings assessed by the marketplace review team:
 
 1. **HIPAA Compliance Level (1-5)** — Security architecture and PHI handling posture
 2. **Clinical Validity Score (A-D)** — Clinical evidence basis and expert endorsement
@@ -31,7 +31,7 @@ All ratings are **Point-in-Time Architectural Assessments** as of the listed ass
 
 **Additional Level 5 Gating Requirements:**
 - Cyber-Liability Insurance: Minimum $1M per occurrence / $2M aggregate
-- Indemnification Agreement with EasyPA
+- Indemnification Agreement with marketplace maintainers
 - 24-hour breach notification commitment
 - Self-attestation of all security representations
 
@@ -72,7 +72,7 @@ All ratings are **Point-in-Time Architectural Assessments** as of the listed ass
 **Badge**: Unvetted | **Use Case**: Use at own risk
 
 **Characteristics:**
-- Not yet assessed by EasyPA
+- Not yet assessed by the review team
 - May be newly submitted or awaiting review
 - No compliance representations made
 
@@ -133,13 +133,13 @@ Ratings are reassessed when:
 ### Assessment Limitations
 
 - Ratings reflect **disclosed** architecture and **self-attested** controls
-- EasyPA does not perform runtime security testing (unless Level 5 pen test is provided)
+- The marketplace does not perform runtime security testing (unless Level 5 pen test is provided)
 - Ratings are not legal opinions or HIPAA certifications
 - Users must perform their own due diligence for production PHI deployments
-- EasyPA does not act as a Business Associate by virtue of providing ratings
+- The marketplace does not act as a Business Associate by virtue of providing ratings
 
 ---
 
 ## Disclaimer
 
-EasyPA.ai provides compliance ratings as informational assessments to assist buyer evaluation. They are not legal opinions, HIPAA certifications, or guarantees of regulatory compliance. Users should conduct their own due diligence and legal review before deploying any MCP in a production environment handling Protected Health Information (PHI).
+MCP for Healthcare provides compliance ratings as informational assessments to assist buyer evaluation. They are not legal opinions, HIPAA certifications, or guarantees of regulatory compliance. Users should conduct their own due diligence and legal review before deploying any MCP in a production environment handling Protected Health Information (PHI).
