@@ -221,7 +221,7 @@ cd healthcare-mcp-public && npm install
 
 | Detail | Value |
 |--------|-------|
-| **Source** | Listed in awesome-medical-mcp-servers |
+| **Source** | [`kieran-heidi/medical-mcp-server`](https://github.com/kieran-heidi/medical-mcp-server) |
 | **HIPAA Level** | ⚪ Level 2 (Reference Only) |
 | **Clinical Score** | **A** — Clinically Validated (NICE is a national guidelines body) |
 | **Note** | UK guidelines only; not directly applicable to US practice |
@@ -636,7 +636,7 @@ Multiple PubMed MCP implementations exist. The marketplace recommends:
 
 | Detail | Value |
 |--------|-------|
-| **Source** | Listed in awesome-medical-mcp-servers |
+| **Source** | [`Augmented-Nature/AlphaFold-MCP-Server`](https://github.com/Augmented-Nature/AlphaFold-MCP-Server) |
 | **HIPAA Level** | ⚪ Level 2 (Reference Only) |
 | **Clinical Score** | **D** — Experimental |
 
@@ -646,7 +646,7 @@ Multiple PubMed MCP implementations exist. The marketplace recommends:
 
 | Detail | Value |
 |--------|-------|
-| **Source** | Listed in awesome-medical-mcp-servers |
+| **Source** | [`brainbloodbarrier/3dslicer-claude-bridge`](https://github.com/brainbloodbarrier/3dslicer-claude-bridge) |
 | **HIPAA Level** | 🟡 Level 3 (De-identified Safe) |
 | **Clinical Score** | **B** — Clinically Informed |
 | **Note** | Requires 3D Slicer installation |
