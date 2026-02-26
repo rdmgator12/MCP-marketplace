@@ -1,0 +1,145 @@
+name: MCP Submission
+description: Submit a healthcare MCP for inclusion in the marketplace
+title: "[MCP Submission] "
+labels: ["mcp-submission", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting your MCP to the Healthcare MCP Marketplace! Every submission is reviewed by our clinical and technical team for healthcare relevance, compliance posture, and code quality.
+
+  - type: input
+    id: mcp_name
+    attributes:
+      label: MCP Name
+      description: The name of your MCP server
+      placeholder: e.g., "My FHIR Patient Lookup MCP"
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: GitHub Repository URL
+      description: Public link to the source code
+      placeholder: https://github.com/org/repo
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does your MCP do? What healthcare workflow does it support?
+      placeholder: Briefly describe functionality, target users, and the clinical/operational problem it solves.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary Category
+      description: Which marketplace category best fits your MCP?
+      options:
+        - Revenue Cycle Management
+        - Clinical Decision Support
+        - FHIR & Health Data Interoperability
+        - Quality, Compliance & Regulatory
+        - Credentialing & Provider Operations
+        - Medical-Legal & Expert Witness
+        - Medical Education & Training
+        - Population Health & Value-Based Care
+        - Life Sciences & Research
+        - Health Plan & Payer Operations
+    validations:
+      required: true
+
+  - type: input
+    id: tool_count
+    attributes:
+      label: Number of Tools
+      description: How many MCP tools does your server expose?
+      placeholder: e.g., 5
+
+  - type: textarea
+    id: tools_list
+    attributes:
+      label: Tool Names & Descriptions
+      description: List each tool name and a one-line description
+      placeholder: |
+        - tool_name_1: Description of what it does
+        - tool_name_2: Description of what it does
+
+  - type: dropdown
+    id: phi_handling
+    attributes:
+      label: Does this MCP handle PHI?
+      description: Protected Health Information (patient names, MRNs, diagnosis linked to identity, etc.)
+      options:
+        - "No - public/reference data only"
+        - "No - de-identified/aggregate data only"
+        - "Yes - designed for PHI but does not store it"
+        - "Yes - stores or processes PHI"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: languages
+    attributes:
+      label: Implementation Language
+      options:
+        - TypeScript
+        - Python
+        - Node.js
+        - Go
+        - Rust
+        - Java
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: install
+    attributes:
+      label: Installation Instructions
+      description: How to install and configure the MCP
+      placeholder: |
+        ```bash
+        npm install my-mcp-server
+        ```
+
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Security & Compliance Checklist
+      description: Check all that apply to your MCP
+      options:
+        - label: Data encrypted in transit (TLS 1.2+)
+        - label: No PHI in error messages or logs
+        - label: API authentication required
+        - label: Rate limiting implemented
+        - label: Input validation on all parameters
+        - label: Business Associate Agreement (BAA) available
+        - label: Audit logging implemented
+        - label: Annual penetration testing performed
+        - label: SOC 2 Type II certified
+        - label: HITRUST certified
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Anything else the review team should know (CMS-0057 relevance, enterprise features, clinical validation, etc.)
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Agreement
+      description: By submitting this MCP, you confirm the following
+      options:
+        - label: I have the right to submit this MCP for listing
+          required: true
+        - label: The repository is publicly accessible or I will provide access for review
+          required: true
+        - label: I understand that compliance ratings are assigned by EasyPA and are point-in-time assessments
+          required: true

@@ -1,0 +1,46 @@
+{
+  "id": "compliance-suite",
+  "name": "Compliance Suite",
+  "version": "1.0.0",
+  "description": "Quality reporting and regulatory compliance.",
+  "use_case": "Compliance officers, quality teams, and credentialing specialists ensuring Medicare policy adherence and provider data accuracy.",
+  "workflows": [
+    "Medicare policy change monitoring",
+    "NCD/LCD compliance verification",
+    "Provider credentialing verification",
+    "Contractor jurisdiction lookup",
+    "HIPAA-compliant AI operations"
+  ],
+  "mcps": [
+    {
+      "id": "easypa-reimbursement-engine",
+      "role": "Primary",
+      "tools_used": [
+        "get_whats_new_report",
+        "search_national_coverage",
+        "search_local_coverage",
+        "get_contractors",
+        "npi_search",
+        "npi_lookup",
+        "npi_validate"
+      ],
+      "why": "Medicare policy monitoring, coverage determination lookup, and provider credential verification."
+    },
+    {
+      "id": "innovaccer-hmcp",
+      "role": "Supporting",
+      "tools_used": [],
+      "why": "Enterprise HIPAA compliance layer with OAuth2, audit trails, and guardrails. Requires Innovaccer licensing.",
+      "optional": true
+    }
+  ],
+  "example_prompts": [
+    "Show me all Medicare coverage policy changes from the last 30 days",
+    "Look up NPI 1234567893 and verify their credentials and practice location",
+    "Which Medicare Administrative Contractor covers my jurisdiction?",
+    "Search for any new or proposed LCDs related to genetic testing",
+    "Validate that this NPI is active and properly formatted"
+  ],
+  "cms_0057_alignment": true,
+  "minimum_hipaa_level": 2
+}

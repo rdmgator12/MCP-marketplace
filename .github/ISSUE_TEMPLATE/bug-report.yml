@@ -1,0 +1,46 @@
+name: Bug Report
+description: Report an issue with a marketplace listing or the registry
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: bug_type
+    attributes:
+      label: Bug Type
+      options:
+        - Incorrect listing information
+        - Broken install command
+        - Dead repository link
+        - Incorrect compliance rating
+        - Registry (mcps.json) data issue
+        - Website/documentation issue
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: mcp_affected
+    attributes:
+      label: Affected MCP (if applicable)
+      description: Name or ID of the MCP with the issue
+      placeholder: e.g., "easypa-reimbursement-engine"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should it say/do instead?
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links, screenshots, or other evidence supporting the correction

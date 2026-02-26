@@ -1,0 +1,44 @@
+{
+  "id": "clinical-reference-kit",
+  "name": "Clinical Reference Kit",
+  "version": "1.0.0",
+  "description": "Point-of-care reference tools for clinicians.",
+  "use_case": "Physicians, APPs, and clinical pharmacists needing instant access to drug information, clinical evidence, medical calculations, and genomic data at the point of care.",
+  "workflows": [
+    "Drug information and interaction checking",
+    "Clinical literature search",
+    "Medical calculation and risk scoring",
+    "Pharmacogenomic data lookup",
+    "Clinical trial discovery"
+  ],
+  "mcps": [
+    {
+      "id": "medical-mcp",
+      "role": "Primary",
+      "tools_used": [],
+      "why": "FDA drug info, WHO data, RxNorm drug interactions, and clinical reference."
+    },
+    {
+      "id": "healthcare-data-hub",
+      "role": "Primary",
+      "tools_used": [],
+      "why": "Clinical trials, medical calculators, ICD-10, and DICOM metadata access."
+    },
+    {
+      "id": "biothings-mcp",
+      "role": "Supporting",
+      "tools_used": [],
+      "why": "Genomics, pharmacogenomics, gene-drug interactions, and variant interpretation."
+    }
+  ],
+  "example_prompts": [
+    "What are the drug interactions between metformin and contrast dye?",
+    "Calculate the CHA2DS2-VASc score for a 72-year-old male with CHF and diabetes",
+    "Search PubMed for the latest meta-analysis on GLP-1 agonists and cardiovascular outcomes",
+    "Look up clinical trials for pediatric ALL with CAR-T therapy",
+    "What pharmacogenomic considerations exist for clopidogrel in CYP2C19 poor metabolizers?"
+  ],
+  "cms_0057_alignment": false,
+  "minimum_hipaa_level": 2,
+  "notes": "Reference-only bundle. No PHI handling. Safe for educational and clinical reference use."
+}

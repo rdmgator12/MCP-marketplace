@@ -1,0 +1,52 @@
+{
+  "id": "denial-fighter",
+  "name": "Denial Fighter Bundle",
+  "version": "1.0.0",
+  "description": "Everything you need to analyze, appeal, and prevent claim denials.",
+  "use_case": "Revenue cycle teams fighting claim denials with AI-assisted policy lookup, clinical evidence gathering, and coding validation.",
+  "workflows": [
+    "Denial root cause analysis",
+    "Medical necessity evidence gathering",
+    "Appeal letter support with clinical citations",
+    "ICD-10 coding accuracy validation",
+    "Payer policy intelligence"
+  ],
+  "mcps": [
+    {
+      "id": "easypa-reimbursement-engine",
+      "role": "Primary",
+      "tools_used": [
+        "search_national_coverage",
+        "batch_get_ncds",
+        "search_local_coverage",
+        "search_codes",
+        "lookup_code",
+        "validate_code",
+        "npi_search",
+        "npi_lookup",
+        "get_contractors",
+        "sad_exclusion_list"
+      ],
+      "why": "NCD/LCD policy lookup identifies coverage criteria. ICD-10 tools validate coding accuracy. NPI tools verify provider credentialing."
+    },
+    {
+      "id": "pubmed-mcp",
+      "role": "Supporting",
+      "tools_used": [
+        "search_articles",
+        "get_article_metadata",
+        "get_full_text_article"
+      ],
+      "why": "Clinical literature strengthens medical necessity arguments in appeal letters."
+    }
+  ],
+  "example_prompts": [
+    "Look up the NCD for hyperbaric oxygen therapy and tell me the covered indications",
+    "Search PubMed for evidence supporting the medical necessity of IV immunoglobulin for CIDP",
+    "Validate ICD-10 code E11.65 and show me the full hierarchy for Type 2 Diabetes",
+    "Find the LCD for my region covering power mobility devices",
+    "Check if adalimumab is on the SAD exclusion list"
+  ],
+  "cms_0057_alignment": true,
+  "minimum_hipaa_level": 2
+}

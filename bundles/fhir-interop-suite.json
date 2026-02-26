@@ -1,0 +1,63 @@
+{
+  "id": "fhir-interop-suite",
+  "name": "FHIR Interoperability Suite",
+  "version": "1.0.0",
+  "description": "Complete FHIR integration toolkit for CMS-0057/HTI-1 compliance.",
+  "use_case": "Health systems, payers, and health IT vendors building CMS-0057 and HTI-1 compliant FHIR integrations with AI agent access.",
+  "workflows": [
+    "FHIR resource CRUD operations",
+    "EHR data extraction (Epic, Cerner)",
+    "Patient Access API integration",
+    "Provider Directory API access",
+    "Medical imaging metadata retrieval",
+    "Natural language FHIR queries"
+  ],
+  "mcps": [
+    {
+      "id": "wso2-fhir-mcp",
+      "role": "Primary",
+      "tools_used": [],
+      "why": "Generic FHIR server connector with SMART-on-FHIR auth. The foundational layer."
+    },
+    {
+      "id": "momentum-fhir-mcp",
+      "role": "Primary",
+      "tools_used": [],
+      "why": "Natural language interface to FHIR. Reduces FHIR learning curve from weeks to minutes."
+    },
+    {
+      "id": "health-record-mcp",
+      "role": "Primary",
+      "tools_used": [],
+      "why": "Direct EHR connectivity. Built by SMART Health IT pioneer Josh Mandel."
+    },
+    {
+      "id": "agentcare-mcp",
+      "role": "Supporting",
+      "tools_used": [],
+      "why": "Epic and Cerner specific tools and prompts for EMR data interaction."
+    },
+    {
+      "id": "dicom-mcp",
+      "role": "Supporting",
+      "tools_used": [],
+      "why": "Medical imaging metadata from PACS and DICOM-compliant systems."
+    }
+  ],
+  "example_prompts": [
+    "Connect to the FHIR server and retrieve all Patient resources with diabetes",
+    "Search the Provider Directory for cardiologists within 50 miles of Boston",
+    "Pull the latest lab results for this patient from Epic",
+    "Query DICOM metadata for all chest CT studies from this month",
+    "What FHIR resources are available on this HealthLake datastore?"
+  ],
+  "cms_0057_alignment": true,
+  "minimum_hipaa_level": 4,
+  "regulatory_references": [
+    "CMS-0057-F: Patient Access API (January 2026)",
+    "CMS-0057-F: Provider Access API (January 2027)",
+    "CMS-0057-F: Payer-to-Payer API (January 2027)",
+    "HTI-1: USCDI v3 with FHIR US Core (January 2026)",
+    "SMART on FHIR v2.0 Authorization"
+  ]
+}

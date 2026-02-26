@@ -1,0 +1,49 @@
+{
+  "id": "prior-auth-stack",
+  "name": "Prior Auth Stack",
+  "version": "1.0.0",
+  "description": "CMS-0057 aligned prior authorization workflow.",
+  "use_case": "Healthcare organizations automating prior authorization with AI-assisted coverage determination, medical necessity evaluation, and FHIR-based electronic submission.",
+  "workflows": [
+    "Coverage determination lookup",
+    "Medical necessity documentation",
+    "ICD-10/CPT coding validation",
+    "Electronic prior auth submission via FHIR",
+    "Payer policy intelligence for PA requirements"
+  ],
+  "mcps": [
+    {
+      "id": "easypa-reimbursement-engine",
+      "role": "Primary",
+      "tools_used": [
+        "search_national_coverage",
+        "batch_get_ncds",
+        "search_local_coverage",
+        "search_codes",
+        "validate_code",
+        "sad_exclusion_list",
+        "get_contractors"
+      ],
+      "why": "Coverage determination and medical necessity criteria lookup. Validates coding accuracy before submission."
+    },
+    {
+      "id": "wso2-fhir-mcp",
+      "role": "Integration",
+      "tools_used": [],
+      "why": "FHIR-based electronic prior authorization submission per CMS-0057 mandate."
+    }
+  ],
+  "example_prompts": [
+    "What are the Medicare coverage criteria for total knee arthroplasty?",
+    "Is prior auth required for MRI of the lumbar spine under this LCD?",
+    "Validate the ICD-10 codes I plan to use for this prior auth submission",
+    "Search for the NCD covering cochlear implants and summarize the indications"
+  ],
+  "cms_0057_alignment": true,
+  "minimum_hipaa_level": 4,
+  "regulatory_references": [
+    "CMS-0057-F: Interoperability and Prior Authorization Final Rule",
+    "45 CFR 156.223: Prior Authorization API requirements",
+    "HL7 FHIR Da Vinci Prior Authorization Support (PAS) Implementation Guide"
+  ]
+}

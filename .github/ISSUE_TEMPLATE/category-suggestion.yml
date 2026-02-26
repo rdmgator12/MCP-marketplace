@@ -1,0 +1,26 @@
+name: Category Suggestion
+description: Suggest a new category or refinement to the marketplace taxonomy
+title: "[Category] "
+labels: ["taxonomy", "enhancement"]
+body:
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Category Suggestion
+      description: Describe the new category or taxonomy change you'd like to see
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this category needed? What healthcare workflows would it serve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example MCPs
+      description: List any existing or potential MCPs that would fit this category

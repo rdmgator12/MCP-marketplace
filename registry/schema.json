@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://easypa.ai/schemas/healthcare-mcp-registry-v1.json",
+  "title": "Healthcare MCP Registry",
+  "description": "Schema for the EasyPA Healthcare MCP Marketplace registry",
+  "type": "object",
+  "required": ["version", "last_updated", "maintainer", "categories", "mcps"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Registry schema version (semver)"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last registry update (YYYY-MM-DD)"
+    },
+    "maintainer": {
+      "type": "object",
+      "required": ["name", "organization", "url"],
+      "properties": {
+        "name": { "type": "string" },
+        "organization": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "credentials": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "number", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "number": { "type": "integer", "minimum": 1 },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "mcps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "source", "description", "categories", "hipaa_level", "clinical_score"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier (kebab-case)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name"
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "source": {
+            "type": "string",
+            "description": "GitHub org/repo or other source identifier"
+          },
+          "url": {
+            "type": ["string", "null"],
+            "format": "uri",
+            "description": "Direct URL to repository or documentation"
+          },
+          "description": {
+            "type": "string",
+            "description": "Brief description of functionality"
+          },
+          "categories": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Category IDs this MCP belongs to"
+          },
+          "hipaa_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "HIPAA compliance level (1-5)"
+          },
+          "clinical_score": {
+            "type": "string",
+            "enum": ["A", "B", "C", "D"],
+            "description": "Clinical validity score"
+          },
+          "tool_count": {
+            "type": ["integer", "null"],
+            "description": "Number of MCP tools exposed"
+          },
+          "tools": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "List of tool names"
+          },
+          "languages": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Implementation languages"
+          },
+          "install": {
+            "type": ["string", "null"],
+            "description": "Installation command"
+          },
+          "assessment_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of compliance assessment"
+          },
+          "reassessment_due": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when reassessment is recommended"
+          },
+          "maintainer": {
+            "type": ["string", "null"],
+            "description": "MCP maintainer name or organization"
+          },
+          "license": {
+            "type": ["string", "null"],
+            "description": "License identifier"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes or caveats"
+          }
+        }
+      }
+    },
+    "bundles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "mcps"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "mcps": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
