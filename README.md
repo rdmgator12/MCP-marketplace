@@ -6,7 +6,7 @@
 
 [![MCP for Healthcare](https://img.shields.io/badge/MCP%20for%20Healthcare-Marketplace-0D7377?style=for-the-badge)](https://github.com/rdmgator12/MCP-marketplace)
 [![License](https://img.shields.io/badge/License-See%20Individual%20MCPs-blue?style=for-the-badge)]()
-[![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-30+-D4A843?style=for-the-badge)]()
+[![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-34-D4A843?style=for-the-badge)]()
 
 ---
 
@@ -76,14 +76,14 @@ Every MCP on this marketplace carries two ratings:
 | # | Category | MCPs | Description |
 |---|----------|------|-------------|
 | 1 | [Revenue Cycle Management](#1-revenue-cycle-management) | 8 | Billing, coding, denials, prior auth, payer policy |
-| 2 | [Clinical Decision Support](#2-clinical-decision-support) | 6 | Drug info, guidelines, diagnostics, calculators |
-| 3 | [FHIR & Interoperability](#3-fhir--health-data-interoperability) | 7 | FHIR connectors, EHR integration, data standards |
-| 4 | [Quality & Compliance](#4-quality-compliance--regulatory) | 2 | HEDIS, MIPS, HIPAA, accreditation |
+| 2 | [Clinical Decision Support](#2-clinical-decision-support) | 11 | Drug info, guidelines, diagnostics, calculators, terminology |
+| 3 | [FHIR & Interoperability](#3-fhir--health-data-interoperability) | 9 | FHIR connectors, EHR integration, data standards |
+| 4 | [Quality & Compliance](#4-quality-compliance--regulatory) | 4 | HEDIS, MIPS, HIPAA, OMOP, accreditation |
 | 5 | [Credentialing & Provider Ops](#5-credentialing--provider-operations) | 3 | NPI lookup, enrollment, practice ops |
 | 6 | [Medical-Legal](#6-medical-legal--expert-witness) | 1 | Case analysis, record review, expert witness |
 | 7 | [Medical Education](#7-medical-education--training) | 3 | Board review, residency training, CME |
-| 8 | [Population Health](#8-population-health--value-based-care) | 1 | Risk stratification, care management |
-| 9 | [Life Sciences & Research](#9-life-sciences--research) | 4 | PubMed, bioRxiv, clinical trials, genomics |
+| 8 | [Population Health](#8-population-health--value-based-care) | 2 | Risk stratification, care management, community health |
+| 9 | [Life Sciences & Research](#9-life-sciences--research) | 10 | PubMed, bioRxiv, clinical trials, genomics |
 | 10 | [Health Plan & Payer Ops](#10-health-plan--payer-operations) | 1 | UM, network management, member services |
 
 ---
@@ -258,6 +258,77 @@ cd healthcare-mcp-public && npm install
 
 ---
 
+### Oncology Decision Support
+
+#### NexOnco MCP
+
+> Oncology clinical evidence for precision medicine decision support.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`Nexgene-Research/nexonco-mcp`](https://github.com/Nexgene-Research/nexonco-mcp) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+
+---
+
+#### NCCN Guidelines MCP
+
+> Access NCCN cancer treatment guidelines for oncology decision support.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`gscfwid/NCCN_guidelines_MCP`](https://github.com/gscfwid/NCCN_guidelines_MCP) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **A** — Clinically Validated |
+| **Languages** | Python |
+
+---
+
+### Medical Terminology & Coding
+
+#### MCP-LOINC
+
+> LOINC API wrapper for medical terminology standardization and lab code lookup.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`Kryzo/mcp-Loinc`](https://github.com/Kryzo/mcp-Loinc) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+
+---
+
+#### SNOMED CT MCP
+
+> SNOMED CT concept lookup via FHIR R4 terminology server for clinical coding standardization.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`eigenbau/mcp-snomed-ct`](https://github.com/eigenbau/mcp-snomed-ct) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **A** — Clinically Validated |
+| **Languages** | Python |
+
+---
+
+### Evidence-Based Medicine
+
+#### Evidence-Based Medicine MCP
+
+> Evidence-based medical advice MCP for clinical decision support workflows.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`chris-lovejoy/evidence-based-medicine-mcp`](https://github.com/chris-lovejoy/evidence-based-medicine-mcp) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | TypeScript |
+
+---
+
 ## 3. FHIR & Health Data Interoperability
 
 *FHIR server connectors, EHR integration, health information exchange, and data standards.*
@@ -352,6 +423,33 @@ git clone https://github.com/the-momentum/fhir-mcp-server.git
 
 ---
 
+### Azure FHIR MCP Server
+
+> Azure Health Data Services FHIR MCP server for cloud-native health data integration.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`erikhoward/azure-fhir-mcp-server`](https://github.com/erikhoward/azure-fhir-mcp-server) |
+| **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+| **Note** | Requires Azure Health Data Services account |
+
+---
+
+### AEHRC FHIR Tools
+
+> FHIR tools by Australian e-Health Research Centre (CSIRO) for health data interoperability.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`aehrc/mcp-fhir-tools`](https://github.com/aehrc/mcp-fhir-tools) |
+| **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | TypeScript |
+
+---
+
 ### DICOM MCP Server
 
 > Query, read, and move medical images and reports from PACS and other DICOM-compliant systems.
@@ -381,6 +479,32 @@ git clone https://github.com/the-momentum/fhir-mcp-server.git
 | **HIPAA Level** | 🟢 Level 5 (HIPAA-Ready) — enterprise-grade compliance layer |
 | **Clinical Score** | **C** — Operationally Useful |
 | **Note** | Proprietary enterprise product. SDK available but full platform requires Innovaccer licensing. |
+
+---
+
+### OMOP MCP (Mayo Clinic NLP)
+
+> OMOP concept mapping via LLMs by Mayo Clinic NLP group for clinical data standardization.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`OHNLP/omop_mcp`](https://github.com/OHNLP/omop_mcp) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+
+---
+
+### PyOMOP (OHDSI/OMOP)
+
+> OHDSI/OMOP clinical data management with FHIR import for observational health data research.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`dermatologist/pyomop`](https://github.com/dermatologist/pyomop) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
 
 ---
 
@@ -442,6 +566,19 @@ git clone https://github.com/the-momentum/fhir-mcp-server.git
 
 ---
 
+### PopHIVE MCP Server
+
+> Yale PopHIVE population health data for community health analysis and value-based care workflows.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`Cicatriiz/pophive-mcp-server`](https://github.com/Cicatriiz/pophive-mcp-server) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | JavaScript |
+
+---
+
 ## 9. Life Sciences & Research
 
 *PubMed, bioRxiv, clinical trials, genomics, and precision medicine.*
@@ -468,6 +605,19 @@ Multiple PubMed MCP implementations exist. The marketplace recommends:
 | **Source** | [`rikachu225/mcp-pubmed-server`](https://github.com/rikachu225/mcp-pubmed-server) |
 | **HIPAA Level** | ⚪ Level 2 (Reference Only) |
 | **Clinical Score** | **A** — Clinically Validated |
+
+---
+
+#### MCP Simple PubMed
+
+> Popular standalone PubMed MCP server for biomedical literature search and retrieval.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`andybrandt/mcp-simple-pubmed`](https://github.com/andybrandt/mcp-simple-pubmed) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **A** — Clinically Validated |
+| **Languages** | Python |
 
 ---
 
@@ -500,6 +650,71 @@ Multiple PubMed MCP implementations exist. The marketplace recommends:
 | **HIPAA Level** | 🟡 Level 3 (De-identified Safe) |
 | **Clinical Score** | **B** — Clinically Informed |
 | **Note** | Requires 3D Slicer installation |
+
+---
+
+### BioMCP
+
+> Clinical trials, genomics, PubMed, and variant annotation in Rust for biomedical research workflows.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`genomoncology/biomcp`](https://github.com/genomoncology/biomcp) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Rust |
+
+---
+
+### ClinicalTrials.gov MCP
+
+> ClinicalTrials.gov REST API for searching and retrieving clinical trial data.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`cyanheads/clinicaltrialsgov-mcp-server`](https://github.com/cyanheads/clinicaltrialsgov-mcp-server) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **A** — Clinically Validated |
+| **Languages** | TypeScript |
+
+---
+
+### M3 MIMIC MCP
+
+> Query MIMIC-IV medical data via natural language for clinical research and analysis.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`rafiattrach/m3`](https://github.com/rafiattrach/m3) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) — MIMIC-IV is de-identified |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+
+---
+
+### TealFlow MCP
+
+> Build Teal R Shiny clinical trial analysis apps with AI assistance.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`Appsilon/TealFlowMCP`](https://github.com/Appsilon/TealFlowMCP) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+
+---
+
+### CDISC Library MCP
+
+> CDISC Library access for clinical data standards and regulatory submissions.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`Cicatriiz/cdisc-library-mcp-server`](https://github.com/Cicatriiz/cdisc-library-mcp-server) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | JavaScript |
 
 ---
 
@@ -658,7 +873,7 @@ MCP is the bridge between these mandated APIs and AI-powered healthcare workflow
 
 ## Roadmap
 
-- [x] Launch marketplace with 30+ curated MCPs across 10 categories
+- [x] Launch marketplace with 34 curated MCPs across 10 categories
 - [x] ReimbursementEngine (18 tools) live
 - [x] HIPAA compliance rating framework published
 - [x] Clinical validity scoring methodology published
