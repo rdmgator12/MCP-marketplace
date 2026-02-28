@@ -804,6 +804,26 @@
       "maintainer": "Cicatriiz",
       "license": null,
       "notes": null
+    },
+    {
+      "id": "langcare-mcp-fhir",
+      "name": "LangCare MCP FHIR",
+      "featured": false,
+      "source": "langcare/langcare-mcp-fhir",
+      "url": "https://github.com/langcare/langcare-mcp-fhir",
+      "description": "Enterprise-grade FHIR R4 proxy for AI agents with 40+ clinical skills, multi-EMR support (Epic, Cerner, GCP), SMART-on-FHIR auth, and HIPAA-compliant audit logging.",
+      "categories": ["fhir"],
+      "hipaa_level": 4,
+      "clinical_score": "B",
+      "tool_count": 4,
+      "tools": ["fhir_read", "fhir_search", "fhir_create", "fhir_update"],
+      "languages": ["Go"],
+      "install": "npm install -g @langcare/langcare-mcp-fhir",
+      "assessment_date": "2026-02-27",
+      "reassessment_due": "2027-02-27",
+      "maintainer": "LangCare",
+      "license": "MIT",
+      "notes": "Supports Epic, Cerner, GCP Healthcare API, and any FHIR R4-compliant server"
     }
   ],
   "bundles": [
@@ -839,7 +859,7 @@
     }
   ],
   "stats": {
-    "total_mcps": 34,
+    "total_mcps": 35,
     "total_categories": 10,
     "total_bundles": 5,
     "hipaa_level_5_count": 2,

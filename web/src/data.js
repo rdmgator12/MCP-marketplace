@@ -542,6 +542,21 @@ export const mcps = [
     languages: ["JavaScript"],
     maintainer: "Cicatriiz",
   },
+  {
+    id: "langcare-mcp-fhir",
+    name: "LangCare MCP FHIR",
+    featured: false,
+    source: "langcare/langcare-mcp-fhir",
+    url: "https://github.com/langcare/langcare-mcp-fhir",
+    description: "Enterprise-grade FHIR R4 proxy for AI agents with 40+ clinical skills, multi-EMR support (Epic, Cerner, GCP), and SMART-on-FHIR auth.",
+    categories: ["fhir"],
+    hipaa_level: 4,
+    clinical_score: "B",
+    tool_count: 4,
+    tools: ["fhir_read", "fhir_search", "fhir_create", "fhir_update"],
+    languages: ["Go"],
+    maintainer: "LangCare",
+  },
 ];
 
 export const bundles = [
@@ -588,7 +603,7 @@ export const bundles = [
 ];
 
 export const stats = {
-  totalMcps: 34,
+  totalMcps: 35,
   totalTools: "120+",
   totalCategories: 10,
   hipaaRated: "100%",

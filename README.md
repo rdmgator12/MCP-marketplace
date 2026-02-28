@@ -6,7 +6,7 @@
 
 [![MCP for Healthcare](https://img.shields.io/badge/MCP%20for%20Healthcare-Marketplace-0D7377?style=for-the-badge)](https://github.com/rdmgator12/MCP-marketplace)
 [![License](https://img.shields.io/badge/License-See%20Individual%20MCPs-blue?style=for-the-badge)]()
-[![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-34-D4A843?style=for-the-badge)]()
+[![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-35-D4A843?style=for-the-badge)]()
 
 ---
 
@@ -77,7 +77,7 @@ Every MCP on this marketplace carries two ratings:
 |---|----------|------|-------------|
 | 1 | [Revenue Cycle Management](#1-revenue-cycle-management) | 8 | Billing, coding, denials, prior auth, payer policy |
 | 2 | [Clinical Decision Support](#2-clinical-decision-support) | 11 | Drug info, guidelines, diagnostics, calculators, terminology |
-| 3 | [FHIR & Interoperability](#3-fhir--health-data-interoperability) | 9 | FHIR connectors, EHR integration, data standards |
+| 3 | [FHIR & Interoperability](#3-fhir--health-data-interoperability) | 10 | FHIR connectors, EHR integration, data standards |
 | 4 | [Quality & Compliance](#4-quality-compliance--regulatory) | 4 | HEDIS, MIPS, HIPAA, OMOP, accreditation |
 | 5 | [Credentialing & Provider Ops](#5-credentialing--provider-operations) | 3 | NPI lookup, enrollment, practice ops |
 | 6 | [Medical-Legal](#6-medical-legal--expert-witness) | 1 | Case analysis, record review, expert witness |
@@ -447,6 +447,25 @@ git clone https://github.com/the-momentum/fhir-mcp-server.git
 | **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) |
 | **Clinical Score** | **B** — Clinically Informed |
 | **Languages** | TypeScript |
+
+---
+
+### LangCare MCP FHIR
+
+> Enterprise-grade FHIR R4 proxy for AI agents with 40+ clinical skills, multi-EMR support, and SMART-on-FHIR auth.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`langcare/langcare-mcp-fhir`](https://github.com/langcare/langcare-mcp-fhir) |
+| **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) — stateless proxy, TLS 1.3, PHI scrubbing, OAuth 2.0 |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Go |
+| **Tools** | 4 core (fhir_read, fhir_search, fhir_create, fhir_update) + 40+ clinical skills |
+| **EMR Support** | Epic, Cerner, GCP Healthcare API, any FHIR R4 server |
+
+```bash
+npm install -g @langcare/langcare-mcp-fhir
+```
 
 ---
 
@@ -873,7 +892,7 @@ MCP is the bridge between these mandated APIs and AI-powered healthcare workflow
 
 ## Roadmap
 
-- [x] Launch marketplace with 34 curated MCPs across 10 categories
+- [x] Launch marketplace with 35 curated MCPs across 10 categories
 - [x] ReimbursementEngine (18 tools) live
 - [x] HIPAA compliance rating framework published
 - [x] Clinical validity scoring methodology published
