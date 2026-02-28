@@ -6,7 +6,7 @@
 
 [![MCP for Healthcare](https://img.shields.io/badge/MCP%20for%20Healthcare-Marketplace-0D7377?style=for-the-badge)](https://github.com/rdmgator12/MCP-marketplace)
 [![License](https://img.shields.io/badge/License-See%20Individual%20MCPs-blue?style=for-the-badge)]()
-[![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-35-D4A843?style=for-the-badge)]()
+[![MCPs Listed](https://img.shields.io/badge/MCPs%20Listed-45-D4A843?style=for-the-badge)]()
 
 ---
 
@@ -75,15 +75,15 @@ Every MCP on this marketplace carries two ratings:
 
 | # | Category | MCPs | Description |
 |---|----------|------|-------------|
-| 1 | [Revenue Cycle Management](#1-revenue-cycle-management) | 8 | Billing, coding, denials, prior auth, payer policy |
+| 1 | [Revenue Cycle Management](#1-revenue-cycle-management) | 9 | Billing, coding, denials, prior auth, payer policy |
 | 2 | [Clinical Decision Support](#2-clinical-decision-support) | 11 | Drug info, guidelines, diagnostics, calculators, terminology |
-| 3 | [FHIR & Interoperability](#3-fhir--health-data-interoperability) | 10 | FHIR connectors, EHR integration, data standards |
-| 4 | [Quality & Compliance](#4-quality-compliance--regulatory) | 4 | HEDIS, MIPS, HIPAA, OMOP, accreditation |
+| 3 | [FHIR & Interoperability](#3-fhir--health-data-interoperability) | 13 | FHIR connectors, EHR integration, data standards |
+| 4 | [Quality & Compliance](#4-quality-compliance--regulatory) | 5 | HEDIS, MIPS, HIPAA, OMOP, synthetic data |
 | 5 | [Credentialing & Provider Ops](#5-credentialing--provider-operations) | 3 | NPI lookup, enrollment, practice ops |
 | 6 | [Medical-Legal](#6-medical-legal--expert-witness) | 1 | Case analysis, record review, expert witness |
 | 7 | [Medical Education](#7-medical-education--training) | 3 | Board review, residency training, CME |
-| 8 | [Population Health](#8-population-health--value-based-care) | 2 | Risk stratification, care management, community health |
-| 9 | [Life Sciences & Research](#9-life-sciences--research) | 10 | PubMed, bioRxiv, clinical trials, genomics |
+| 8 | [Population Health](#8-population-health--value-based-care) | 3 | Risk stratification, care management, community health |
+| 9 | [Life Sciences & Research](#9-life-sciences--research) | 14 | PubMed, bioRxiv, clinical trials, genomics, precision medicine |
 | 10 | [Health Plan & Payer Ops](#10-health-plan--payer-operations) | 1 | UM, network management, member services |
 
 ---
@@ -129,6 +129,19 @@ Every MCP on this marketplace carries two ratings:
 ```bash
 /plugin install rdmgator12/reimbursement-engine
 ```
+
+---
+
+### Healthcare Billing Codes
+
+> CPT, ICD-10, and HCPCS billing code lookup and search with reimbursement rates.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`contextkits/healthcare-billing-codes`](https://github.com/contextkits/healthcare-billing-codes) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **C** — Operationally Useful |
+| **Languages** | Python |
 
 ---
 
@@ -469,6 +482,48 @@ npm install -g @langcare/langcare-mcp-fhir
 
 ---
 
+### FHIR MCP Server (C#)
+
+> C# FHIR R4 MCP server with CRUD, search, transactions, and Azure FHIR Server support.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`quiquemz/fhir-mcp-server`](https://github.com/quiquemz/fhir-mcp-server) |
+| **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | C# |
+| **Note** | First C#/.NET FHIR MCP implementation |
+
+---
+
+### Secure FHIR MCP
+
+> HIPAA-hardened FHIR MCP with PHI masking, break-glass emergency access, OWASP security, and audit logging.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`xSoVx/fhir-mcp`](https://github.com/xSoVx/fhir-mcp) |
+| **HIPAA Level** | 🔵 Level 4 (HIPAA-Aware) — PHI masking, Safe vs Trusted modes |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | TypeScript |
+| **Security** | OWASP-compliant, multi-tier rate limiting, SMART on FHIR/OAuth2 |
+
+---
+
+### Orthanc DICOM MCP
+
+> DICOM MCP with Orthanc PACS integration, radiology report generation, FHIR ImagingStudy, and mini-RIS.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`sscotti/dicom-mcp`](https://github.com/sscotti/dicom-mcp) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+| **Note** | Docker Compose with Orthanc + HAPI FHIR + PostgreSQL |
+
+---
+
 ### DICOM MCP Server
 
 > Query, read, and move medical images and reports from PACS and other DICOM-compliant systems.
@@ -527,6 +582,20 @@ npm install -g @langcare/langcare-mcp-fhir
 
 ---
 
+### DataMimic
+
+> Deterministic synthetic healthcare test data generation for CI/CD and analytics. Privacy-preserving, HIPAA-safe.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`rapiddweller/datamimic`](https://github.com/rapiddweller/datamimic) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) — synthetic data only, no PHI |
+| **Clinical Score** | **C** — Operationally Useful |
+| **Languages** | Python |
+| **Note** | Generates demographically realistic patient data, doctor specialties, hospital capacities |
+
+---
+
 ## 5. Credentialing & Provider Operations
 
 *Provider enrollment, credentialing, NPI management, and practice operations.*
@@ -582,6 +651,20 @@ npm install -g @langcare/langcare-mcp-fhir
 | **Source** | [`the-momentum/apple-health-mcp-server`](https://github.com/the-momentum/apple-health-mcp-server) |
 | **HIPAA Level** | 🟡 Level 3 (De-identified Safe) — consumer data, user-controlled |
 | **Clinical Score** | **D** — Experimental |
+
+---
+
+### Apple Health MCP (DuckDB)
+
+> Query Apple Health data with SQL and natural language via DuckDB. Automated health reports, lazy loading, and caching.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`neiltron/apple-health-mcp`](https://github.com/neiltron/apple-health-mcp) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) — consumer data, user-controlled |
+| **Clinical Score** | **D** — Experimental |
+| **Languages** | TypeScript |
+| **Note** | 518 stars — most popular health MCP on GitHub |
 
 ---
 
@@ -734,6 +817,60 @@ Multiple PubMed MCP implementations exist. The marketplace recommends:
 | **HIPAA Level** | ⚪ Level 2 (Reference Only) |
 | **Clinical Score** | **B** — Clinically Informed |
 | **Languages** | JavaScript |
+
+---
+
+### Medical MCPs (100+ Tools)
+
+> 100+ unified tools across 14 biomedical APIs including Reactome, KEGG, UniProt, OMIM, ChEMBL, OpenFDA, PubMed, and ClinicalTrials.gov.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`pascalwhoop/medical-mcps`](https://github.com/pascalwhoop/medical-mcps) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+| **Tools** | 100+ across pathways, genes, proteins, variants, diseases, drugs, literature, trials |
+
+---
+
+### Medical Research MCP Suite
+
+> Cross-database medical research intelligence unifying ClinicalTrials.gov, PubMed, and FDA with AI-enhanced analysis.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`ezhou89/medical-research-mcp-suite`](https://github.com/ezhou89/medical-research-mcp-suite) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | TypeScript |
+
+---
+
+### Precision Medicine MCP
+
+> Multi-omics precision medicine platform with genomics, spatial transcriptomics, medical imaging, and clinician-in-the-loop workflows.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`lynnlangit/precision-medicine-mcp`](https://github.com/lynnlangit/precision-medicine-mcp) |
+| **HIPAA Level** | 🟡 Level 3 (De-identified Safe) — HIPAA Safe Harbor de-identification |
+| **Clinical Score** | **B** — Clinically Informed |
+| **Languages** | Python |
+| **Note** | Includes ovarian cancer case study. Immutable audit trails with 10-year retention. |
+
+---
+
+### PubMed MCP (Advanced)
+
+> Advanced PubMed search with citation export (BibTeX, APA, MLA, Chicago, Vancouver, RIS), author search, and journal analysis.
+
+| Detail | Value |
+|--------|-------|
+| **Source** | [`chrismannina/pubmed-mcp`](https://github.com/chrismannina/pubmed-mcp) |
+| **HIPAA Level** | ⚪ Level 2 (Reference Only) |
+| **Clinical Score** | **A** — Clinically Validated |
+| **Languages** | Python |
 
 ---
 
@@ -892,7 +1029,7 @@ MCP is the bridge between these mandated APIs and AI-powered healthcare workflow
 
 ## Roadmap
 
-- [x] Launch marketplace with 35 curated MCPs across 10 categories
+- [x] Launch marketplace with 45 curated MCPs across 10 categories
 - [x] ReimbursementEngine (18 tools) live
 - [x] HIPAA compliance rating framework published
 - [x] Clinical validity scoring methodology published
